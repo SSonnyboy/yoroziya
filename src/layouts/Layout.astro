@@ -154,8 +154,18 @@ const bannerOffset =
 		<ConfigCarrier></ConfigCarrier>
 		<slot />
 
+		<!-- 全站背景音乐（循环播放） -->
+		<audio id="bgm" src={url("/audio/bgm.mp3")} loop preload="auto"></audio>
+
 		<!-- increase the page height during page transition to prevent the scrolling animation from jumping -->
 		<div id="page-height-extend" class="hidden h-[300vh]"></div>
+	     <!-- fireworks 鼠标点击特效-->
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"
+		></script>
+		<script type="text/javascript" src={url("/utils/fireworks.min.js")}></script>
+		<!-- fireworks 鼠标点击特效结束-->
 	</body>
 </html>
 
@@ -257,6 +267,36 @@ function disableAnimation() {
 */
 
 const bannerEnabled = !!document.getElementById('banner-wrapper')
+
+function setupBgm() {
+	const bgm = document.getElementById('bgm') as HTMLAudioElement | null
+	if (!bgm) return
+	const storageKey = 'bgm-enabled'
+	const isEnabled = () => localStorage.getItem(storageKey) !== '0'
+	bgm.volume = 0.3
+	const tryPlay = () => {
+		if (!isEnabled()) return
+		bgm.play().catch(() => {})
+		window.removeEventListener('pointerdown', tryPlay)
+		window.removeEventListener('keydown', tryPlay)
+	}
+	const applyState = (enabled: boolean) => {
+		if (!enabled) {
+			bgm.pause()
+			return
+		}
+		bgm.play().catch(() => {})
+	}
+	if (!isEnabled()) {
+		bgm.pause()
+	}
+	window.addEventListener('pointerdown', tryPlay, { once: true })
+	window.addEventListener('keydown', tryPlay, { once: true })
+	window.addEventListener('bgm:toggle', (event: Event) => {
+		const customEvent = event as CustomEvent<{ enabled: boolean }>
+		applyState(customEvent.detail?.enabled ?? true)
+	})
+}
 
 function setClickOutsideToClose(panel: string, ignores: string[]) {
 	document.addEventListener("click", event => {
@@ -369,6 +409,7 @@ function init() {
 	loadHue();
 	initCustomScrollbar();
 	showBanner();
+	setupBgm();
 }
 
 /* Load settings when entering the site */
