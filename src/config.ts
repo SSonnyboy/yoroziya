@@ -69,9 +69,9 @@ export const profileConfig: ProfileConfig = {
 			url: "https://scholar.google.com/citations?hl=en&user=IPHwI-EAAAAJ&view_op=list_works&gmla=AF9nlQu5GwG4x5loMPIJjzalINtf8b3rbi75itm7Ob3d6GpV2wcPdTqSzGhWdB5IyIk4tTKAjKI4H2LwUTWERdM_",
 		},
 		{
-			name: "OCRID",
+			name: "LeetCode",
 			icon: "material-symbols:computer-outline-rounded",
-			url: "https://orcid.org/my-orcid?orcid=0009-0001-4709-2892",
+			url: "https://leetcode.cn/u/xiao-yu-hang-yuan-x/",
 		},
 		{
 			name: "Xhs",
