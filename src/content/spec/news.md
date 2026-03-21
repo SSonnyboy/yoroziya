@@ -1,8 +1,8 @@
 ---
-title: "New"
+title: "📰 New"
 ---
 
-## Education
+## 🎓 Education
 
 - **[Jinan University (GuangZhou, CN)](https://www.jnu.edu.cn/)** — Undergraduate
   
@@ -13,7 +13,7 @@ title: "New"
   - Dates: 2025–2027
   - ongoing
 
-## Publications
+## 📄 Publications
 
 - **COMT: Co-Training Mean Teachers Semi-Supervised Training Framework for Cervical Segmentation** — 2025 IEEE 22nd International Symposium on Biomedical Imaging (ISBI), 2025
   
