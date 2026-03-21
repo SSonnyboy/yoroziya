@@ -22,7 +22,7 @@ export const siteConfig: SiteConfig = {
 		credit: {
 			enable: true, // Display the credit text of the banner image
 			text: "愿我们的旅途充满诅咒和祝福 ⭐", // Credit text to be displayed
-			url: "", // (Optional) URL link to the original artwork or artist's page
+			url: "https://www.bilibili.com/video/BV1zN411R79L/?spm_id_from=333.1387.favlist.content.click&vd_source=297e5274c50ad430f8c5ef406c09ae15", // (Optional) URL link to the original artwork or artist's page
 		},
 	},
 	toc: {
@@ -45,8 +45,12 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		LinkPreset.About,
 		{
+			name: "News",
+			url: "/news/",
+		},
+		{
 			name: "GitHub",
-			url: "https://github.com/saicaca/fuwari", // Internal links should not include the base path, as it is automatically added
+			url: "https://github.com/SSonnyboy", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 	],
