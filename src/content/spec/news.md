@@ -23,9 +23,8 @@ title: "📰 New"
   
   - Authors: Juntao Wu; Xianting Huang; Yu Chen; Shuai Pang; Ke Wang
   - **[Links: Scaling (ICCV 2025)](https://openaccess.thecvf.com/content/ICCV2025/html/Wu_Scaling_and_Taming_Adversarial_Training_with_Synthetic_Data_ICCV_2025_paper.html)**
-- **Activations as Features: Probing LLMs for Generalizable Essay Scoring Representations** — ​ (AAAI)​. 2026
+- **Activations as Features: Probing LLMs for Generalizable Essay Scoring Representations** — ​ *Thirty-Eighth Conference on Innovative Applications of Artificial Intelligence* (AAAI)​. 2026
   
   - Authors: Jinwei Chi; Ke Wang; Yu Chen; Xuanye Lin; Qiang Xu
   - **[Links: AaF (AAAI 2026)](https://arxiv.org/abs/2512.19456)**
-    
 
