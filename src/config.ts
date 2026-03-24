@@ -17,7 +17,7 @@ export const siteConfig: SiteConfig = {
 	},
 	banner: {
 		enable: true,
-		src: "./assets/images/banner.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+		src: "https://img.102465.xyz/file/1774339709256_banner.jpg", // Hosted on image bed
 		position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
 		credit: {
 			enable: true, // Display the credit text of the banner image
@@ -57,7 +57,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	avatar: "https://img.102465.xyz/file/1774339719031_avatar.jpg", // Hosted on image bed
 	name: "biabuluo",
 	bio: "Hey, can you hear me?",
 	links: [
