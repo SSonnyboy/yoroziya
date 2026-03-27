@@ -1,5 +1,5 @@
 ---
-title: Leetcode hot 100 两数之和
+title: Leetcode Hot 100 两数之和
 published: 2026-03-27
 description: "Leetcode Hot 100 数组板块的第一题记录：两数之和。本文整理了排序加双指针解法，以及更经典的哈希表解法。"
 image: "https://img.102465.xyz/file/1774582101221_two-sum-cover.jpg"
