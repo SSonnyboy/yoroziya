@@ -324,26 +324,132 @@ O(n)
 O(n)
 ```
 
-## 这题还能继续优化吗？
+## 解法二：相向双指针
 
-可以。
+如果想继续优化空间，这题还可以写成**相向双指针**。
 
-这题还有一个非常经典的优化版本：
+核心思路是：
 
-- 用左右双指针
-- 一边移动一边维护 `left_max` 和 `right_max`
-- 把空间复杂度压到 `O(1)`
+- 用 `left` 和 `right` 分别从两端向中间收缩
+- 同时维护当前左侧最高值 `left_max`
+- 和当前右侧最高值 `right_max`
+- 每次只处理较矮的一侧
+
+为什么可以这样做？
+
+因为哪一边更矮，当前这一格的接水上限，就先由那一边决定。
+
+也就是说：
+
+- 如果 `height[left] < height[right]`
+- 那么左边这格最终能接多少水，只需要看 `left_max`
+- 这时右边再高，暂时也不会成为限制问题
+
+这就是双指针版背后的“短板效应”。
+
+### 代码实现
+
+```python
+class Solution(object):
+    def trap(self, height):
+        """
+        :type height: List[int]
+        :rtype: int
+        """
+        n = len(height)
+        left, right = 0, n - 1
+        ans = 0
+        left_max, right_max = 0, 0
+
+        while left < right:
+            if height[left] < height[right]:
+                if height[left] > left_max:
+                    left_max = height[left]
+                else:
+                    ans += left_max - height[left]
+                left += 1
+            else:
+                if height[right] > right_max:
+                    right_max = height[right]
+                else:
+                    ans += right_max - height[right]
+                right -= 1
+
+        return ans
+```
+
+### 思路解析
+
+双指针版最核心的判断就是：
+
+```python
+if height[left] < height[right]:
+```
+
+#### 情况一：左边更矮
+
+说明当前左边这一格，未来能接多少水，
+取决于左边历史最高挡板 `left_max`。
+
+- 如果 `height[left] > left_max`，那就更新左侧最高墙
+- 否则这里就能接：
+
+```python
+left_max - height[left]
+```
+
+然后左指针右移。
+
+#### 情况二：右边更矮或相等
+
+同理，右边这格能接多少水，
+就由右边历史最高挡板 `right_max` 决定。
+
+- 如果 `height[right] > right_max`，更新 `right_max`
+- 否则这里就能接：
+
+```python
+right_max - height[right]
+```
+
+然后右指针左移。
+
+### 为什么双指针版能成立
+
+因为当我们发现：
+
+```python
+height[left] < height[right]
+```
+
+就说明当前左边这格至少已经有一个不低于它的右挡板存在。
+
+此时左边这格到底能装多少水，
+关键就看左边历史最高挡板 `left_max` 能把它托到多高。
+
+右边既然已经不比它矮，
+那这一步就可以放心结算左边。
+
+另一侧同理。
+
+这也是为什么双指针版不需要真的把整个 `left_max` 和 `right_max` 数组存下来，
+只需要边走边维护两个最大值就够了。
+
+## 两种解法对比
+
+| 解法 | 时间复杂度 | 空间复杂度 | 特点 |
+| --- | --- | --- | --- |
+| 前缀最大值 + 后缀最大值 | `O(n)` | `O(n)` | 更直观，适合先把题想明白 |
+| 相向双指针 | `O(n)` | `O(1)` | 更省空间，属于进一步优化 |
 
 所以如果从“空间效率”角度看，
 双指针版会更省。
 
-但这不代表你这版差。
+但这不代表前后缀版差。
 
 恰恰相反：
 
-> **前后缀最大值版更直观，更适合先把这题想明白。**
-
-因为它把“每一格为什么能接这些水”这件事拆得很清楚。
+> **前后缀最大值版更直观，更适合先把这题想明白；双指针版则是在此基础上的空间优化。**
 
 ## 这种写法的关键点
 
