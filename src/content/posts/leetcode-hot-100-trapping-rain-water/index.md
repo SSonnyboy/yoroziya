@@ -2,7 +2,7 @@
 title: Leetcode Hot 100 接雨水
 published: 2026-03-27
 description: "Leetcode Hot 100 双指针板块第七题记录：接雨水。本文先用前缀最大值和后缀最大值拆解每一列能接多少水，再解释为什么核心不是求和，而是找左右两侧的最高挡板。"
-image: "./trapping-rain-water-cover.jpg"
+image: "https://img.102465.xyz/file/1774701532420_trapping-rain-water-cover.jpg"
 tags: ["Leetcode", "Hot 100", "前后缀", "算法"]
 category: "Algorithm"
 draft: false
@@ -31,7 +31,7 @@ Leetcode Hot 100 第七篇，来到这道名字很形象、思路也很有画面
 
 给定 `n` 个非负整数表示每个宽度为 `1` 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
 
-![接雨水题目截图](./trapping-rain-water-cover.jpg)
+![接雨水题目截图](https://img.102465.xyz/file/1774701532420_trapping-rain-water-cover.jpg)
 
 ## 先想明白：一列水能装多少？
 

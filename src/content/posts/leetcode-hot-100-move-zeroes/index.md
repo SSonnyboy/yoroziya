@@ -2,7 +2,7 @@
 title: Leetcode Hot 100 移动零
 published: 2026-03-27
 description: "Leetcode Hot 100 双指针板块第四题记录：移动零。本文用快慢指针拆解如何在原地操作的前提下，把所有 0 挪到数组末尾并保持非零元素相对顺序不变。"
-image: "./move-zeroes-cover.jpg"
+image: "https://img.102465.xyz/file/1774701522552_move-zeroes-cover.jpg"
 tags: ["Leetcode", "Hot 100", "双指针", "算法"]
 category: "Algorithm"
 draft: false
@@ -35,7 +35,7 @@ Leetcode Hot 100 第四篇，轮到这道名字朴素、要求却一点不含糊
 
 请注意，必须在不复制数组的情况下原地对数组进行操作。
 
-![移动零题目截图](./move-zeroes-cover.jpg)
+![移动零题目截图](https://img.102465.xyz/file/1774701522552_move-zeroes-cover.jpg)
 
 ## 解题思路：快慢指针原地交换
 

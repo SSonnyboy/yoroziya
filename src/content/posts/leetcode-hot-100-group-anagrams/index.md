@@ -2,7 +2,7 @@
 title: Leetcode Hot 100 字母异位词分组
 published: 2026-03-27
 description: "Leetcode Hot 100 哈希表板块第二题记录：字母异位词分组。本文用字典解法拆解如何把字符排序后的结果作为分组键。"
-image: "./group-anagrams-cover.jpg"
+image: "https://img.102465.xyz/file/1774701512622_group-anagrams-cover.jpg"
 tags: ["Leetcode", "Hot 100", "哈希表", "算法"]
 category: "Algorithm"
 draft: false
@@ -26,7 +26,7 @@ Leetcode Hot 100 第二篇，轮到这道看着像字符串题、骨子里其实
 
 给你一个字符串数组，请你将 **字母异位词** 组合在一起，可以按任意顺序返回结果列表。
 
-![字母异位词分组题目截图](./group-anagrams-cover.jpg)
+![字母异位词分组题目截图](https://img.102465.xyz/file/1774701512622_group-anagrams-cover.jpg)
 
 ### 什么是字母异位词？
 

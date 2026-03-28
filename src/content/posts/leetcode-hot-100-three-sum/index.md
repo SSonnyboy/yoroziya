@@ -2,7 +2,7 @@
 title: Leetcode Hot 100 三数之和
 published: 2026-03-27
 description: "Leetcode Hot 100 双指针板块第六题记录：三数之和。本文用排序加双指针拆解如何固定一个数后在剩余区间寻找两数之和，同时处理重复元素，避免得到重复三元组。"
-image: "./three-sum-cover.jpg"
+image: "https://img.102465.xyz/file/1774701523354_three-sum-cover.jpg"
 tags: ["Leetcode", "Hot 100", "双指针", "算法"]
 category: "Algorithm"
 draft: false
@@ -40,7 +40,7 @@ Leetcode Hot 100 第六篇，来到双指针题库里一位相当有名的老面
 
 注意：答案中不可以包含重复的三元组。
 
-![三数之和题目截图](./three-sum-cover.jpg)
+![三数之和题目截图](https://img.102465.xyz/file/1774701523354_three-sum-cover.jpg)
 
 ## 解题思路：排序 + 固定一个数 + 左右双指针
 
