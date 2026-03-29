@@ -11,13 +11,13 @@ I was lucky to get into a top local high school (almost missed it), and later en
 
 Here’s a photo from my university days (yes, it’s a “photo filter” moment 😄):
 
-![My university](./img/myschool.jpg)
+![My university](https://img.102465.xyz/file/1774338611737_myschool.jpg)
 
 At the time of writing this, I was already a third-year student at **Jinan University**.
 
 And here’s a real photo of me:
 
-![Me](./img/myself.jpg)
+![Me](https://img.102465.xyz/file/1774338610746_myself.jpg)
 
 ## 📝 Final Notes
 Coincidentally, I’m a computer science student. My expectations for the future? Not much—hahaha.  
